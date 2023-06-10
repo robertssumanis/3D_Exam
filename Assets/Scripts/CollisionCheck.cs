@@ -5,16 +5,14 @@ using UnityEngine;
 public class CollisionCheck : MonoBehaviour
 {
     private float points;
-    public float playedTime;
 
     void Start()
     {
-        playedTime = 0;
+
     }
 
-    void Update(){
-    
-        playedTime += Time.deltaTime;
+    void Update()
+    {
 
     }
 
@@ -27,7 +25,7 @@ public class CollisionCheck : MonoBehaviour
             points = points + 1;
             print(points);
             if (points == 4){
-                print("Your score in seconds: " + playedTime);
+                print("Your score in seconds: " + Time.time);
             }
         }
     }
